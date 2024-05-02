@@ -5,7 +5,7 @@ function New() {
     return (
         <Default>
             <h2>Add a new bread</h2>
-            <form action="/breads" method="POST">
+            <form action="/bread" method="POST">
                 <label htmlFor="name">Name</label>
                 <input
                     type="text"
@@ -18,6 +18,16 @@ function New() {
                     type="text"
                     name="image"
                     id="image" />
+                    
+                <label htmlFor="baker">Baker</label>
+                <select name="baker" id="baker">
+                    <option value="Rachel">Rachel</option>
+                    <option value="Monica">Monica</option>
+                    <option value="Joey">Joey</option>
+                    <option value="Chandler">Chandler</option>
+                    <option value="Ross">Ross</option>
+                    <option value="Phoebe">Phoebe</option>
+                </select>
                 <label htmlFor="hasGluten">Has Gluten?</label>
                 <input
                     type="checkbox"

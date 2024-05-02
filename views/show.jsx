@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layout/default')
 
-function Show({ bread, index }) {
+function Show({ bread }) {
     return (
         <Default>
             <h3>{bread.name}</h3>
@@ -15,11 +15,11 @@ function Show({ bread, index }) {
                 have gluten.
             </p>
             <img src={bread.image} alt={bread.name} />
-            <a href={`/places/${id}/edit`} className="btn btn-warning">Edit</a>
-            <form action={`/bread/${index}?_method=DELETE`} method="POST">
+            <p>{bread.getBakedBy()}</p>
+            <a href={`/bread/${bread.id}/edit`}><button>Edit</button></a>
+            <form action={`/bread/${bread.id}?_method=DELETE`} method="POST">
                 <input type='submit' value="DELETE" />
             </form>
-
             <li><a href="/bread">Go home</a></li>
         </Default>
 
